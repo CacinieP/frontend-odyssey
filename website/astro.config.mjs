@@ -20,9 +20,7 @@ export default defineConfig({
         {
           label: 'Getting Started',
           translations: { 'zh-CN': '开始学习' },
-          items: [
-            { slug: 'guides/introduction' },
-          ],
+          autogenerate: { directory: 'guides' },
         },
         {
           label: 'I. HTML',
@@ -38,26 +36,6 @@ export default defineConfig({
           label: 'III. JavaScript',
           translations: { 'zh-CN': 'III. JavaScript' },
           autogenerate: { directory: '03-javascript' },
-        },
-        {
-          label: 'IV. TypeScript',
-          translations: { 'zh-CN': 'IV. TypeScript' },
-          autogenerate: { directory: '04-typescript' },
-        },
-        {
-          label: 'V. React',
-          translations: { 'zh-CN': 'V. React' },
-          autogenerate: { directory: '05-react' },
-        },
-        {
-          label: 'VI. Engineering',
-          translations: { 'zh-CN': 'VI. 工程化' },
-          autogenerate: { directory: '06-engineering' },
-        },
-        {
-          label: 'VII. AI Agents',
-          translations: { 'zh-CN': 'VII. AI 智能体' },
-          autogenerate: { directory: '07-ai-agents' },
         },
       ],
     }),
