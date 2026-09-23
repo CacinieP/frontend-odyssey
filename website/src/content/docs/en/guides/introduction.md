@@ -23,7 +23,7 @@ Each chapter has clear explanations with real-world analogies. Concepts build on
 Every concept comes with runnable code. Clone the repo and run:
 
 ```bash
-git clone https://github.com/your-username/frontend-odyssey.git
+git clone https://github.com/CacinieP/frontend-odyssey.git
 cd frontend-odyssey
 pnpm install
 ```

@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
 export default defineConfig({
-  site: 'https://your-username.github.io',
+  site: 'https://CacinieP.github.io',
   base: '/frontend-odyssey',
   integrations: [
     starlight({
@@ -14,7 +14,7 @@ export default defineConfig({
         zh: { label: '中文', lang: 'zh-CN' },
       },
       social: [
-        { icon: 'github', label: 'GitHub', href: 'https://github.com/your-username/frontend-odyssey' },
+        { icon: 'github', label: 'GitHub', href: 'https://github.com/CacinieP/frontend-odyssey' },
       ],
       sidebar: [
         {

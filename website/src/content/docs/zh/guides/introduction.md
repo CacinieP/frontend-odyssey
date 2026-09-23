@@ -23,7 +23,7 @@ Frontend Odyssey 是一份**免费、开源、动手实践**的指南，带你�
 每个概念都配有可运行的代码。克隆仓库然后运行：
 
 ```bash
-git clone https://github.com/your-username/frontend-odyssey.git
+git clone https://github.com/CacinieP/frontend-odyssey.git
 cd frontend-odyssey
 pnpm install
 ```

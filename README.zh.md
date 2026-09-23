@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 [![Node](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org/)
 [![pnpm](https://img.shields.io/badge/pnpm-%3E%3D9.0.0-orange.svg)](https://pnpm.io/)
-[![CI](https://img.shields.io/badge/CI-GitHub_Actions-2088FF.svg)](https://github.com/your-username/frontend-odyssey/actions)
+[![CI](https://img.shields.io/badge/CI-GitHub_Actions-2088FF.svg)](https://github.com/CacinieP/frontend-odyssey/actions)
 [![Docs](https://img.shields.io/badge/docs-Astro_Starlight-FF5D01.svg)](https://starlight.astro.build/)
 
 ---
@@ -65,7 +65,7 @@ corepack enable
 
 1. **克隆项目仓库**：
    ```bash
-   git clone https://github.com/your-username/frontend-odyssey.git
+   git clone https://github.com/CacinieP/frontend-odyssey.git
    cd frontend-odyssey
    ```
 
@@ -151,7 +151,7 @@ frontend-odyssey/
 
 ### 贡献工作流 (Contribution Workflow)
 
-1. **复刻项目 (Fork)**：点击 GitHub 右上角 Fork 按钮创建你自己的分支仓库（`https://github.com/your-username/frontend-odyssey/fork`）
+1. **复刻项目 (Fork)**：点击 GitHub 右上角 Fork 按钮创建你自己的分支仓库（`https://github.com/CacinieP/frontend-odyssey/fork`）
 2. **创建特性分支 (Feature Branch)**：
    ```bash
    git checkout -b feature/new-react-example
