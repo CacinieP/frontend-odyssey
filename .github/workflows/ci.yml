@@ -15,30 +15,24 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Enable Corepack
-        run: corepack enable
-
       - name: Setup Node.js 20
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-
-      - name: Cache pnpm store
-        uses: actions/cache@v4
+      - name: Install pnpm 9
+        uses: pnpm/action-setup@v4
         with:
-          path: ${{ env.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+          version: 9
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
+
+      - name: Run Challenge Tests
+        run: |
+          node challenges/01-html/challenge-01/test.js solution.html
+          node challenges/02-css/challenge-01/test.js solution.css
+          node challenges/03-javascript/challenge-01/test.js solution
 
       - name: Build documentation website
-        run: pnpm --filter website build
+        run: pnpm --filter @frontend-odyssey/website build
