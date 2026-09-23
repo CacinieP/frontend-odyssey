@@ -13,9 +13,9 @@ export default defineConfig({
         en: { label: 'English', lang: 'en' },
         zh: { label: '中文', lang: 'zh-CN' },
       },
-      social: [
-        { icon: 'github', label: 'GitHub', href: 'https://github.com/CacinieP/frontend-odyssey' },
-      ],
+      social: {
+        github: 'https://github.com/CacinieP/frontend-odyssey',
+      },
       sidebar: [
         {
           label: 'Getting Started',
