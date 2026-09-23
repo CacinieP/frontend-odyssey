@@ -1,0 +1,9 @@
+{
+  "name": "@frontend-odyssey/html-challenge-01",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Fix the div soup challenge - convert generic div elements to semantic HTML",
+  "scripts": {
+    "test": "node test.js"
+  }
+}

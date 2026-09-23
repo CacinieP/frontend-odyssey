@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A modern, responsive, accessible Todo Application built with vanilla HTML, CSS, and JavaScript. Capstone project for Frontend Odyssey Chapter III.">
+  <title>Odyssey Tasks | Vanilla JS Todo App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-layout">
+    <!-- App Header -->
+    <header class="app-header">
+      <div class="header-content">
+        <div class="brand-group">
+          <div class="logo-icon" aria-hidden="true">✓</div>
+          <div>
+            <h1 class="app-title">Odyssey Tasks</h1>
+            <p class="app-subtitle">Vanilla JavaScript Capstone Project</p>
+          </div>
+        </div>
+
+        <!-- Dark / Light Theme Toggle -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark or light theme" type="button">
+          <!-- Sun Icon (shown in dark mode) -->
+          <svg class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Moon Icon (shown in light mode) -->
+          <svg class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Todo Card Container -->
+    <main class="todo-card">
+      <!-- Input Form -->
+      <form id="todo-form" class="todo-form" autocomplete="off">
+        <label for="todo-input" class="sr-only">Add a new task</label>
+        <div class="input-wrapper">
+          <span class="input-icon" aria-hidden="true">＋</span>
+          <input
+            type="text"
+            id="todo-input"
+            class="todo-input"
+            placeholder="What needs to be accomplished today?"
+            maxlength="120"
+            autofocus
+            required
+          >
+          <button type="submit" id="add-btn" class="add-btn" aria-label="Add task">
+            Add
+          </button>
+        </div>
+      </form>
+
+      <!-- Filter Controls Bar -->
+      <div class="controls-bar" role="toolbar" aria-label="Task filter controls">
+        <div class="filter-group" role="tablist">
+          <button
+            type="button"
+            class="filter-btn active"
+            data-filter="all"
+            role="tab"
+            aria-selected="true"
+          >
+            All
+          </button>
+          <button
+            type="button"
+            class="filter-btn"
+            data-filter="active"
+            role="tab"
+            aria-selected="false"
+          >
+            Active
+          </button>
+          <button
+            type="button"
+            class="filter-btn"
+            data-filter="completed"
+            role="tab"
+            aria-selected="false"
+          >
+            Completed
+          </button>
+        </div>
+
+        <div class="quick-status">
+          <span id="items-left" class="items-left">0 items left</span>
+        </div>
+      </div>
+
+      <!-- Todo List & Empty State -->
+      <div class="todo-list-container">
+        <ul id="todo-list" class="todo-list" aria-label="Todo list" aria-live="polite">
+          <!-- Dynamically populated by app.js -->
+        </ul>
+
+        <!-- Empty state placeholder (displayed when no tasks exist for active filter) -->
+        <div id="empty-state" class="empty-state" style="display: none;">
+          <div class="empty-icon" aria-hidden="true">📋</div>
+          <h2 class="empty-title">All tasks cleared!</h2>
+          <p class="empty-desc">Take a break or add a new task above.</p>
+        </div>
+      </div>
+
+      <!-- Action Footer Bar -->
+      <footer class="card-footer">
+        <div class="footer-stats">
+          <span id="footer-count" class="footer-count">Showing 0 tasks</span>
+        </div>
+        <button type="button" id="clear-completed" class="btn-clear" disabled>
+          Clear completed
+        </button>
+      </footer>
+    </main>
+
+    <!-- App Instructions & Tips -->
+    <footer class="app-instructions">
+      <p class="instructions-text">
+        <kbd>Enter</kbd> to add &bull; Double-click to edit &bull; <kbd>Escape</kbd> to cancel edit
+      </p>
+      <p class="project-credit">
+        Chapter III Capstone Project &bull; <a href="https://github.com/frontend-odyssey" target="_blank" rel="noopener noreferrer">Frontend Odyssey</a>
+      </p>
+    </footer>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

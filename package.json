@@ -1,0 +1,27 @@
+{
+  "name": "frontend-odyssey",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A bilingual frontend learning journey: from HTML/CSS/JS to TypeScript, React, and AI Agents",
+  "scripts": {
+    "dev": "pnpm --filter website dev",
+    "build": "pnpm --filter website build",
+    "lint": "pnpm -r run lint",
+    "test": "pnpm -r run test"
+  },
+  "keywords": [
+    "frontend",
+    "tutorial",
+    "html",
+    "css",
+    "javascript",
+    "typescript",
+    "react",
+    "ai-agents"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=9.0.0"
+  }
+}

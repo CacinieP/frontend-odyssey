@@ -1,0 +1,7 @@
+packages:
+  - 'website'
+  - 'examples/*'
+  - 'examples/**/*'
+  - 'challenges/*'
+  - 'challenges/**/*'
+  - 'projects/*'

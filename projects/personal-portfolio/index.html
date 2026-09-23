@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alex Chen - Frontend Engineer personal portfolio demonstrating semantic HTML, modern CSS Grid, Flexbox, and responsive design.">
+  <title>Alex Chen | Frontend Developer & UI Craftsman</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Skip to main content link for keyboard accessibility (WCAG) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="#hero" class="brand" aria-label="Alex Chen Portfolio Home">
+        <span class="brand-code">&lt;</span>AlexChen<span class="brand-accent">/&gt;</span>
+      </a>
+
+      <nav class="navbar" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#contact" class="btn btn-sm btn-primary">Hire Me</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span>Available for new opportunities</span>
+          </div>
+
+          <h1 class="hero-title">
+            Crafting <span class="gradient-text">accessible</span> &amp; high-performance web experiences.
+          </h1>
+
+          <p class="hero-description">
+            Hi, I'm <strong>Alex Chen</strong> — a frontend developer obsessed with web standards,
+            semantic HTML, elegant CSS architecture, and building user interfaces that delight everyone.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              View My Work
+              <svg class="icon" viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+          </div>
+
+          <div class="hero-socials">
+            <span class="social-label">Connect:</span>
+            <ul class="social-links" aria-label="Social profiles">
+              <li>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub profile">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter profile">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn profile">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="terminal-card">
+            <div class="terminal-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="terminal-title">developer-profile.css</span>
+            </div>
+            <pre class="terminal-code"><code><span class="token-selector">.developer</span> {
+  <span class="token-prop">name</span>: <span class="token-string">"Alex Chen"</span>;
+  <span class="token-prop">role</span>: <span class="token-string">"Frontend Engineer"</span>;
+  <span class="token-prop">focus</span>: <span class="token-string">"Semantic HTML &amp; CSS"</span>;
+  <span class="token-prop">passion</span>: <span class="token-string">"Web Accessibility"</span>;
+  <span class="token-prop">layout</span>: <span class="token-func">flexbox</span>(<span class="token-val">fluid</span>) + <span class="token-func">grid</span>(<span class="token-val">responsive</span>);
+  <span class="token-prop">status</span>: <span class="token-string">"Ready to create"</span>;
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-eyebrow">01. About Me</p>
+          <h2 class="section-title">Design-minded engineer with a love for web standards</h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-bio">
+            <p>
+              I fell in love with frontend engineering when I realized that simple text files — HTML and CSS —
+              can be viewed by billions of people across devices, cultures, and accessibility tools.
+            </p>
+            <p>
+              Before reaching for heavy JavaScript frameworks, I believe in squeezing every ounce of power
+              from <strong>semantic HTML5 elements</strong>, <strong>modern CSS Grid and Flexbox</strong>,
+              and <strong>fluid responsive design</strong>. Strong foundations produce faster pages, simpler codebases,
+              and better user journeys.
+            </p>
+            <p>
+              When I'm not tweaking CSS variables or auditing color contrast ratios, you can find me
+              mentoring aspiring developers, studying typography, or experimenting with design systems.
+            </p>
+
+            <div class="about-principles">
+              <h3 class="principles-title">Guiding Principles</h3>
+              <ul class="principles-list">
+                <li>
+                  <span class="principle-bullet">🎯</span>
+                  <div>
+                    <strong>Accessibility First:</strong> Web content belongs to everyone regardless of ability or device.
+                  </div>
+                </li>
+                <li>
+                  <span class="principle-bullet">⚡</span>
+                  <div>
+                    <strong>Performance Obsessed:</strong> Lean markup and zero bloat mean lightning-fast load times.
+                  </div>
+                </li>
+                <li>
+                  <span class="principle-bullet">📐</span>
+                  <div>
+                    <strong>Systematic Styling:</strong> Token-driven custom properties for consistent design rhythms.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <aside class="about-stats-card" aria-label="Key statistics">
+            <h3 class="stats-card-title">Quick Highlights</h3>
+            <div class="stats-grid">
+              <div class="stat-item">
+                <span class="stat-number">4+</span>
+                <span class="stat-label">Years of Crafting</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Semantic Markup</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">100</span>
+                <span class="stat-label">Lighthouse Performance</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">25+</span>
+                <span class="stat-label">UI Components Built</span>
+              </div>
+            </div>
+
+            <div class="stats-quote">
+              <blockquote>
+                "Good design is as little design as possible. Good code is as accessible as possible."
+              </blockquote>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-eyebrow">02. Featured Work</p>
+          <h2 class="section-title">Projects built with precision &amp; care</h2>
+          <p class="section-subtitle">
+            A curated collection of web projects demonstrating responsive architecture, semantic structuring, and clean CSS styling.
+          </p>
+        </header>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="project-preview preview-canvas" aria-hidden="true">
+              <div class="card-browser-mockup">
+                <div class="mockup-bar">
+                  <span class="mock-dot"></span>
+                  <span class="mock-dot"></span>
+                  <span class="mock-dot"></span>
+                  <span class="mock-url">devcanvas.app</span>
+                </div>
+                <div class="mockup-split-content">
+                  <div class="mock-pane-editor">
+                    <span class="mock-line mock-w-60"></span>
+                    <span class="mock-line mock-w-80"></span>
+                    <span class="mock-line mock-w-40"></span>
+                  </div>
+                  <div class="mock-pane-preview">
+                    <span class="mock-heading"></span>
+                    <span class="mock-line mock-w-90"></span>
+                    <span class="mock-line mock-w-70"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-badge">Web Application</span>
+              </div>
+              <h3 class="project-title">DevCanvas</h3>
+              <p class="project-description">
+                A browser-native Markdown workstation with live side-by-side preview, syntax highlighting, and export capabilities. Built with structured semantics and accessible keyboard shortcuts.
+              </p>
+              <ul class="project-tags" aria-label="Technologies used">
+                <li class="tag">HTML5 Semantic</li>
+                <li class="tag">CSS Grid</li>
+                <li class="tag">Flexbox</li>
+                <li class="tag">CSS Variables</li>
+              </ul>
+              <div class="project-links">
+                <a href="#projects" class="project-link" aria-label="View live demo of DevCanvas">
+                  Live Preview
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5zM5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" clip-rule="evenodd"/>
+                  </svg>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link link-secondary" aria-label="Source code for DevCanvas">
+                  Source Code
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="project-preview preview-weather" aria-hidden="true">
+              <div class="card-weather-mockup">
+                <div class="weather-temp-badge">
+                  <span class="weather-icon">☀️</span>
+                  <span class="weather-degrees">24°C</span>
+                </div>
+                <div class="weather-mini-bars">
+                  <div class="bar-col"><span class="bar-fill" style="height: 60%;"></span><span class="bar-txt">10a</span></div>
+                  <div class="bar-col"><span class="bar-fill" style="height: 85%;"></span><span class="bar-txt">12p</span></div>
+                  <div class="bar-col"><span class="bar-fill" style="height: 100%;"></span><span class="bar-txt">2p</span></div>
+                  <div class="bar-col"><span class="bar-fill" style="height: 70%;"></span><span class="bar-txt">4p</span></div>
+                  <div class="bar-col"><span class="bar-fill" style="height: 45%;"></span><span class="bar-txt">6p</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-badge">Dashboard</span>
+              </div>
+              <h3 class="project-title">WeatherPulse</h3>
+              <p class="project-description">
+                A clean, responsive weather station dashboard with fluid card layouts, animated atmospheric representations, hourly forecasts, and air quality index monitoring.
+              </p>
+              <ul class="project-tags" aria-label="Technologies used">
+                <li class="tag">Responsive Design</li>
+                <li class="tag">Mobile First</li>
+                <li class="tag">CSS Animations</li>
+                <li class="tag">WCAG 2.1 AA</li>
+              </ul>
+              <div class="project-links">
+                <a href="#projects" class="project-link" aria-label="View live demo of WeatherPulse">
+                  Live Preview
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5zM5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" clip-rule="evenodd"/>
+                  </svg>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link link-secondary" aria-label="Source code for WeatherPulse">
+                  Source Code
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card">
+            <div class="project-preview preview-studio" aria-hidden="true">
+              <div class="card-snippet-mockup">
+                <div class="snippet-header">
+                  <span class="snippet-tag">TypeScript</span>
+                  <span class="snippet-action">Copy</span>
+                </div>
+                <div class="snippet-code-lines">
+                  <div class="code-line"><span class="token-kw">type</span> <span class="token-id">Theme</span> = <span class="token-st">'light'</span> | <span class="token-st">'dark'</span>;</div>
+                  <div class="code-line"><span class="token-kw">const</span> apply = (t: <span class="token-id">Theme</span>) =&gt; { ... };</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-badge">Developer Tool</span>
+              </div>
+              <h3 class="project-title">CodeSnippet Studio</h3>
+              <p class="project-description">
+                A minimalist developer snippet catalog with custom syntax themes, tag-based taxonomy, one-click copying, and pure CSS layout management.
+              </p>
+              <ul class="project-tags" aria-label="Technologies used">
+                <li class="tag">CSS Custom Props</li>
+                <li class="tag">Semantic HTML</li>
+                <li class="tag">Modern UI</li>
+                <li class="tag">Micro-Interactions</li>
+              </ul>
+              <div class="project-links">
+                <a href="#projects" class="project-link" aria-label="View live demo of CodeSnippet Studio">
+                  Live Preview
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5zM5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" clip-rule="evenodd"/>
+                  </svg>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link link-secondary" aria-label="Source code for CodeSnippet Studio">
+                  Source Code
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-eyebrow">03. Toolkit</p>
+          <h2 class="section-title">Skills &amp; Technologies</h2>
+          <p class="section-subtitle">
+            Tools, standards, and methodologies I practice every day to craft resilient user interfaces.
+          </p>
+        </header>
+
+        <div class="skills-categories-grid">
+          <!-- Category 1 -->
+          <div class="skill-category-card">
+            <div class="category-icon" aria-hidden="true">🌐</div>
+            <h3 class="category-title">Semantic Markup</h3>
+            <p class="category-desc">Structuring clean, accessible document trees that search engines and assistive technology understand.</p>
+            <ul class="badge-list" aria-label="Markup skills">
+              <li class="badge">HTML5 Standards</li>
+              <li class="badge">ARIA Landmarks</li>
+              <li class="badge">Semantic Elements</li>
+              <li class="badge">SEO Best Practices</li>
+              <li class="badge">Accessible Forms</li>
+            </ul>
+          </div>
+
+          <!-- Category 2 -->
+          <div class="skill-category-card">
+            <div class="category-icon" aria-hidden="true">🎨</div>
+            <h3 class="category-title">Styling &amp; Layout</h3>
+            <p class="category-desc">Designing responsive, performant stylesheets with modern layout engines and variable systems.</p>
+            <ul class="badge-list" aria-label="CSS skills">
+              <li class="badge">CSS Grid</li>
+              <li class="badge">Flexbox</li>
+              <li class="badge">Custom Properties</li>
+              <li class="badge">Responsive Media Queries</li>
+              <li class="badge">CSS Transitions</li>
+              <li class="badge">Fluid Typography</li>
+            </ul>
+          </div>
+
+          <!-- Category 3 -->
+          <div class="skill-category-card">
+            <div class="category-icon" aria-hidden="true">♿</div>
+            <h3 class="category-title">Accessibility (A11y)</h3>
+            <p class="category-desc">Ensuring web experiences are fully navigable, perceivable, and operable by everyone.</p>
+            <ul class="badge-list" aria-label="Accessibility skills">
+              <li class="badge">WCAG 2.1 Standards</li>
+              <li class="badge">Keyboard Navigation</li>
+              <li class="badge">Focus Management</li>
+              <li class="badge">Color Contrast AA/AAA</li>
+              <li class="badge">Screen Reader Testing</li>
+            </ul>
+          </div>
+
+          <!-- Category 4 -->
+          <div class="skill-category-card">
+            <div class="category-icon" aria-hidden="true">🛠️</div>
+            <h3 class="category-title">Workflow &amp; Tooling</h3>
+            <p class="category-desc">Modern developer tooling for maintaining quality, collaboration, and high deployment standards.</p>
+            <ul class="badge-list" aria-label="Tooling skills">
+              <li class="badge">Git / GitHub</li>
+              <li class="badge">Chrome DevTools</li>
+              <li class="badge">Lighthouse Audits</li>
+              <li class="badge">Figma to Code</li>
+              <li class="badge">Mobile Emulation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-info">
+            <header class="section-header align-left">
+              <p class="section-eyebrow">04. Say Hello</p>
+              <h2 class="section-title">Let's build something great</h2>
+            </header>
+            <p class="contact-text">
+              Have a project in mind, an open frontend role, or simply want to chat about web standards and CSS architecture?
+              Send me a message and I'll get back to you within 24 hours.
+            </p>
+
+            <div class="contact-details">
+              <div class="contact-detail-item">
+                <span class="detail-icon" aria-hidden="true">📍</span>
+                <div>
+                  <span class="detail-label">Location</span>
+                  <span class="detail-value">San Francisco, CA (Open to Remote)</span>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <span class="detail-icon" aria-hidden="true">✉️</span>
+                <div>
+                  <span class="detail-label">Email</span>
+                  <a href="mailto:alex@example.com" class="detail-link">alex.chen.dev@example.com</a>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <span class="detail-icon" aria-hidden="true">💼</span>
+                <div>
+                  <span class="detail-label">Availability</span>
+                  <span class="detail-value">Full-time Roles &amp; Selective Consulting</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Semantic Contact Form -->
+          <form class="contact-form" action="#" method="POST">
+            <div class="form-group">
+              <label for="name" class="form-label">
+                Full Name <span class="required" aria-hidden="true">*</span>
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-input"
+                placeholder="Ada Lovelace"
+                required
+                autocomplete="name"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">
+                Email Address <span class="required" aria-hidden="true">*</span>
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-input"
+                placeholder="ada@example.com"
+                required
+                autocomplete="email"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="subject" class="form-label">
+                Subject <span class="required" aria-hidden="true">*</span>
+              </label>
+              <select id="subject" name="subject" class="form-select" required>
+                <option value="" disabled selected>Select a topic...</option>
+                <option value="project">New Project Inquiry</option>
+                <option value="job">Job / Employment Opportunity</option>
+                <option value="mentorship">Mentorship or Collaboration</option>
+                <option value="other">Just saying hi!</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">
+                Message <span class="required" aria-hidden="true">*</span>
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                class="form-textarea"
+                rows="5"
+                placeholder="Tell me about your project, timeline, and goals..."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+              Send Message
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#hero" class="brand footer-brand">
+          <span class="brand-code">&lt;</span>AlexChen<span class="brand-accent">/&gt;</span>
+        </a>
+        <p class="footer-text">
+          Designed and hand-coded with pure HTML5 &amp; CSS3. No JavaScript frameworks required.
+        </p>
+        <p class="footer-credit">
+          Part of the <a href="https://github.com/frontend-odyssey" target="_blank" rel="noopener noreferrer">Frontend Odyssey</a> learning path.
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <ul class="footer-nav" aria-label="Footer quick links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#hero" class="back-to-top" aria-label="Back to top of page">
+          Back to top ↑
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

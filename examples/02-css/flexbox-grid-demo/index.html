@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox & Grid in Action — Frontend Odyssey</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ========================================================
+         SECTION 1: FLEXBOX NAVBAR
+         Demonstrates: justify-content: space-between,
+         align-items: center, gap, flex-wrap
+         ======================================================== -->
+    <header class="site-header">
+      <nav class="navbar">
+        <div class="brand">
+          <span class="brand-icon">⚡</span>
+          <span class="brand-title">Frontend Odyssey</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#flexbox-demo">Flexbox Cards</a></li>
+          <li><a href="#grid-demo">CSS Grid Gallery</a></li>
+          <li><a href="#comparison">Layout Rules</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="#github" class="btn btn-outline">Docs</a>
+          <a href="#get-started" class="btn btn-primary">Try Now</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-container">
+      <!-- Hero Introduction -->
+      <section class="hero-section">
+        <span class="pill-badge">Chapter II: CSS Showcase</span>
+        <h1>Mastering Modern Layout Systems</h1>
+        <p class="hero-subtitle">
+          See how <strong>Flexbox</strong> (1D content flow) and <strong>CSS Grid</strong> (2D layout blueprints) complement each other in real-world interfaces.
+        </p>
+      </section>
+
+      <!-- ========================================================
+           SECTION 2: FLEXBOX FEATURE CARDS
+           Demonstrates: display: flex, flex-wrap: wrap, gap,
+           flex: 1 1 280px, and internal column alignment
+           ======================================================== -->
+      <section id="flexbox-demo" class="demo-section">
+        <div class="section-heading">
+          <h2>1. Flexbox: Dynamic Card List (1D Flow)</h2>
+          <p>
+            The cards below wrap automatically, stretch to fill remaining line space with <code>flex: 1 1 280px</code>, and use internal flexbox columns to keep buttons pinned at the bottom.
+          </p>
+        </div>
+
+        <div class="cards-flex-container">
+          <!-- Card 1 -->
+          <article class="flex-card">
+            <div class="card-badge">Flex Direction: Row</div>
+            <h3 class="card-title">Main Axis Alignment</h3>
+            <p class="card-description">
+              <code>justify-content</code> controls distribution along the main axis. Easily spread items with <code>space-between</code> or center them effortlessly.
+            </p>
+            <div class="card-footer">
+              <span class="tag">1D Layout</span>
+              <a href="#" class="card-action">Learn More &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="flex-card highlight">
+            <div class="card-badge featured">Flex Direction: Column</div>
+            <h3 class="card-title">Cross Axis Precision</h3>
+            <p class="card-description">
+              <code>align-items</code> aligns items perpendicular to the main axis. Flex items stretch to uniform heights by default, eliminating mismatched heights.
+            </p>
+            <div class="card-footer">
+              <span class="tag">Equal Heights</span>
+              <a href="#" class="card-action">Learn More &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="flex-card">
+            <div class="card-badge">Flex Item Flexibility</div>
+            <h3 class="card-title">Shrink &amp; Grow Naturally</h3>
+            <p class="card-description">
+              With <code>flex-grow</code>, <code>flex-shrink</code>, and <code>flex-basis</code>, items absorb extra available space or compress gently without clipping.
+            </p>
+            <div class="card-footer">
+              <span class="tag">Adaptive</span>
+              <a href="#" class="card-action">Learn More &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           SECTION 3: CSS GRID PHOTO GALLERY
+           Demonstrates: display: grid, grid-template-columns,
+           repeat(auto-fit, minmax(...)), grid-column span, gap
+           ======================================================== -->
+      <section id="grid-demo" class="demo-section">
+        <div class="section-heading">
+          <h2>2. CSS Grid: Photo &amp; Media Gallery (2D Layout)</h2>
+          <p>
+            This gallery uses <code>grid-template-columns: repeat(auto-fit, minmax(240px, 1fr))</code>. Notice how featured items can span 2 columns using <code>grid-column: span 2</code>.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- Gallery Item 1 (Wide Featured Item) -->
+          <figure class="gallery-item item-featured">
+            <div class="image-placeholder gradient-1">
+              <span class="item-overlay">Featured: Ultrawide View (2 Columns)</span>
+            </div>
+            <figcaption class="gallery-caption">
+              <h4>Alpine Sunset</h4>
+              <p>grid-column: span 2</p>
+            </figcaption>
+          </figure>
+
+          <!-- Gallery Item 2 -->
+          <figure class="gallery-item">
+            <div class="image-placeholder gradient-2">
+              <span class="item-overlay">Standard Cell</span>
+            </div>
+            <figcaption class="gallery-caption">
+              <h4>Neon Cybercity</h4>
+              <p>1fr track</p>
+            </figcaption>
+          </figure>
+
+          <!-- Gallery Item 3 -->
+          <figure class="gallery-item">
+            <div class="image-placeholder gradient-3">
+              <span class="item-overlay">Standard Cell</span>
+            </div>
+            <figcaption class="gallery-caption">
+              <h4>Desert Dunes</h4>
+              <p>1fr track</p>
+            </figcaption>
+          </figure>
+
+          <!-- Gallery Item 4 -->
+          <figure class="gallery-item">
+            <div class="image-placeholder gradient-4">
+              <span class="item-overlay">Standard Cell</span>
+            </div>
+            <figcaption class="gallery-caption">
+              <h4>Misty Redwood</h4>
+              <p>1fr track</p>
+            </figcaption>
+          </figure>
+
+          <!-- Gallery Item 5 -->
+          <figure class="gallery-item">
+            <div class="image-placeholder gradient-5">
+              <span class="item-overlay">Standard Cell</span>
+            </div>
+            <figcaption class="gallery-caption">
+              <h4>Nordic Coast</h4>
+              <p>1fr track</p>
+            </figcaption>
+          </figure>
+
+          <!-- Gallery Item 6 (Wide Showcase) -->
+          <figure class="gallery-item item-featured">
+            <div class="image-placeholder gradient-6">
+              <span class="item-overlay">Featured: Panoramic Shot</span>
+            </div>
+            <figcaption class="gallery-caption">
+              <h4>Cosmic Nebula</h4>
+              <p>grid-column: span 2</p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           SECTION 4: WHEN TO USE WHICH SUMMARY
+           ======================================================== -->
+      <section id="comparison" class="demo-section comparison-box">
+        <h3>Senior Engineer's Layout Cheatsheet</h3>
+        <div class="comparison-flex">
+          <div class="rule-card">
+            <span class="rule-icon">📐</span>
+            <h4>Flexbox for Micro Components</h4>
+            <p>Use for navbars, toolbars, icon+text pairs, tags, and centering elements vertically &amp; horizontally.</p>
+          </div>
+          <div class="rule-card">
+            <span class="rule-icon">🏛️</span>
+            <h4>Grid for Macro Structure</h4>
+            <p>Use for whole-page layouts, dashboards, galleries, magazine layouts, and rigid 2D alignment.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer with Flexbox -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <p>&copy; Frontend Odyssey. Open source educational project.</p>
+        <ul class="footer-links">
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">Docs</a></li>
+          <li><a href="#">Challenges</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

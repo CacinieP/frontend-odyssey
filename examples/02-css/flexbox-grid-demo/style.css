@@ -1,0 +1,518 @@
+/* ==========================================================================
+   CSS STYLESHEET: Modern Layout Systems (Flexbox & CSS Grid)
+   Frontend Odyssey — Chapter II: CSS
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CSS RESET & DESIGN TOKENS
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Includes padding and border in element dimensions */
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Color Palette */
+  --color-bg: #090d16;
+  --color-surface: #111827;
+  --color-surface-elevated: #1f2937;
+  --color-border: #374151;
+  --color-text-main: #f9fafb;
+  --color-text-muted: #9ca3af;
+  --color-primary: #3b82f6;
+  --color-primary-hover: #2563eb;
+  --color-accent: #8b5cf6;
+
+  /* Typography & Spacing */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --transition-fast: 0.2s ease;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
+   2. SITE HEADER & FLEXBOX NAVBAR
+   Key concepts:
+   - display: flex -> turns .navbar into a flex container
+   - justify-content: space-between -> pushes brand left, actions right
+   - align-items: center -> perfectly aligns items vertically along cross axis
+   - gap: 1rem -> keeps spacing clean without margin hacks
+   -------------------------------------------------------------------------- */
+.site-header {
+  background-color: rgba(17, 24, 39, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  /* --- FLEX CONTAINER PROPERTIES --- */
+  display: flex;
+  justify-content: space-between; /* Brand on left, actions on right */
+  align-items: center;            /* Center children along the cross-axis */
+  flex-wrap: wrap;                /* Wrap gracefully on narrow screens */
+  gap: 1rem;                      /* Spacing between wrapped items */
+  /* --------------------------------- */
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+}
+
+.brand {
+  /* Flexbox is great for micro-alignment: icon + text */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+}
+
+.brand-icon {
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  /* Navigation menu as a flex row */
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.nav-links a {
+  color: var(--color-text-muted);
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.nav-links a:hover {
+  color: var(--color-primary);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.btn-outline {
+  border: 1px solid var(--color-border);
+  color: var(--color-text-main);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-surface-elevated);
+  border-color: var(--color-text-muted);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border: 1px solid transparent;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+/* --------------------------------------------------------------------------
+   3. HERO SECTION
+   -------------------------------------------------------------------------- */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.pill-badge {
+  display: inline-block;
+  padding: 0.25rem 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: rgba(59, 130, 246, 0.15);
+  color: var(--color-primary);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+}
+
+.hero-section h1 {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #ffffff 40%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.demo-section {
+  margin-bottom: 4.5rem;
+}
+
+.section-heading {
+  margin-bottom: 2rem;
+}
+
+.section-heading h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.section-heading p {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+}
+
+.section-heading code {
+  background-color: var(--color-surface-elevated);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  color: #e2e8f0;
+  font-size: 0.9em;
+}
+
+/* --------------------------------------------------------------------------
+   4. FLEXBOX SHOWCASE: DYNAMIC CARDS CONTAINER
+   Key concepts:
+   - display: flex -> flex container
+   - flex-wrap: wrap -> cards drop to next line when viewport narrows
+   - gap: 1.5rem -> uniform gutter between rows and columns
+   - flex: 1 1 280px on cards -> grow to fill line, shrink if needed, min base 280px
+   - Internal card layout: flex-direction: column to push footer to bottom
+   -------------------------------------------------------------------------- */
+.cards-flex-container {
+  /* Flex container for the card list */
+  display: flex;
+  flex-wrap: wrap;        /* Allows wrapping to multiple rows */
+  gap: 1.5rem;            /* Spacing between all cards */
+}
+
+.flex-card {
+  /* --- FLEX ITEM SIZING --- */
+  /* flex: <grow> <shrink> <basis> */
+  /* 1 = can grow to absorb remaining space */
+  /* 1 = can shrink when space is restricted */
+  /* 280px = ideal base width before growing/shrinking */
+  flex: 1 1 280px;
+  /* ----------------------- */
+
+  /* --- INTERNAL CARD FLEXBOX --- */
+  /* Using Flexbox inside the card creates a clean vertical column */
+  display: flex;
+  flex-direction: column;         /* Main axis is vertical (top to bottom) */
+  justify-content: space-between; /* Push title/desc up and footer down */
+  /* ----------------------------- */
+
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.flex-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary);
+}
+
+.flex-card.highlight {
+  border-color: rgba(139, 92, 246, 0.4);
+  background: linear-gradient(180deg, rgba(139, 92, 246, 0.08) 0%, var(--color-surface) 100%);
+}
+
+.card-badge {
+  align-self: flex-start; /* Micro flexbox: aligns badge to left */
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  background-color: var(--color-surface-elevated);
+  color: var(--color-text-muted);
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.card-badge.featured {
+  background-color: rgba(139, 92, 246, 0.2);
+  color: #c4b5fd;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.card-description {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-footer {
+  /* Sub-flex container for tag and action link */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
+  margin-top: auto; /* Fallback to guarantee footer sticks to bottom */
+}
+
+.tag {
+  font-size: 0.75rem;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.card-action {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  transition: color var(--transition-fast);
+}
+
+.card-action:hover {
+  color: var(--color-primary);
+}
+
+/* --------------------------------------------------------------------------
+   5. CSS GRID SHOWCASE: PHOTO & MEDIA GALLERY
+   Key concepts:
+   - display: grid -> turns .gallery-grid into a 2D grid container
+   - grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) ->
+     automatically calculates the number of columns based on container width!
+   - grid-column: span 2 -> allows featured items to stretch across 2 columns
+   - gap: 1.5rem -> uniform gutter between grid tracks
+   -------------------------------------------------------------------------- */
+.gallery-grid {
+  /* --- GRID CONTAINER PROPERTIES --- */
+  display: grid;
+  /* Auto-fit: fills row with as many 240px+ columns as will fit */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  /* --------------------------------- */
+}
+
+.gallery-item {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary);
+}
+
+/* Grid item spanning: Make featured items twice as wide */
+.gallery-item.item-featured {
+  grid-column: span 2;
+}
+
+.image-placeholder {
+  height: 200px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+}
+
+.item-featured .image-placeholder {
+  height: 240px;
+}
+
+/* Eye-catching CSS gradients simulating gallery images */
+.gradient-1 { background: linear-gradient(135deg, #f43f5e, #fb923c); }
+.gradient-2 { background: linear-gradient(135deg, #06b6d4, #3b82f6); }
+.gradient-3 { background: linear-gradient(135deg, #eab308, #f97316); }
+.gradient-4 { background: linear-gradient(135deg, #10b981, #059669); }
+.gradient-5 { background: linear-gradient(135deg, #8b5cf6, #ec4899); }
+.gradient-6 { background: linear-gradient(135deg, #3b82f6, #8b5cf6); }
+
+.item-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.gallery-caption {
+  padding: 1rem 1.25rem;
+}
+
+.gallery-caption h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.gallery-caption p {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  font-family: monospace;
+}
+
+/* --------------------------------------------------------------------------
+   6. COMPARISON SECTION
+   -------------------------------------------------------------------------- */
+.comparison-box {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+}
+
+.comparison-box h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.comparison-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.rule-card {
+  flex: 1 1 300px;
+  background-color: var(--color-surface-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+.rule-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.rule-card h4 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+}
+
+.rule-card p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+/* --------------------------------------------------------------------------
+   7. FOOTER
+   -------------------------------------------------------------------------- */
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  padding: 2rem 1.5rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+.footer-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.footer-links a:hover {
+  color: var(--color-text-main);
+}
+
+/* --------------------------------------------------------------------------
+   8. RESPONSIVE BREAKPOINTS (Mobile-First Adjustments)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .nav-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  /* Reset 2-column span on smaller screens so gallery items don't overflow */
+  .gallery-item.item-featured {
+    grid-column: span 1;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

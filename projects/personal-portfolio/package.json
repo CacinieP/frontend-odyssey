@@ -1,0 +1,18 @@
+{
+  "name": "@frontend-odyssey/personal-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Capstone project for Chapters I & II: A responsive personal portfolio built with pure HTML and modern CSS.",
+  "scripts": {
+    "dev": "npx serve ."
+  },
+  "keywords": [
+    "html5",
+    "css3",
+    "flexbox",
+    "css-grid",
+    "responsive-design",
+    "portfolio"
+  ],
+  "license": "MIT"
+}

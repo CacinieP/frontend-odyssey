@@ -1,0 +1,9 @@
+{
+  "name": "@frontend-odyssey/html-semantic-page",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A complete semantic HTML blog post layout demonstrating semantic landmarks and elements",
+  "scripts": {
+    "dev": "npx serve ."
+  }
+}

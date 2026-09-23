@@ -1,0 +1,17 @@
+{
+  "name": "@frontend-odyssey/todo-app-vanilla",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Capstone project for Chapter III: A modern, accessible Todo application built with vanilla HTML, CSS, and JavaScript.",
+  "scripts": {
+    "dev": "npx serve ."
+  },
+  "keywords": [
+    "vanilla-js",
+    "dom-manipulation",
+    "localstorage",
+    "event-delegation",
+    "todo-app"
+  ],
+  "license": "MIT"
+}

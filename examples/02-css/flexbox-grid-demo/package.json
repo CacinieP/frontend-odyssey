@@ -1,0 +1,9 @@
+{
+  "name": "@frontend-odyssey/css-flexbox-grid",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Interactive demo showcasing Flexbox and CSS Grid layout techniques",
+  "scripts": {
+    "dev": "npx serve ."
+  }
+}

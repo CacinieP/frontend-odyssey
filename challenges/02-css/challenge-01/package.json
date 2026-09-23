@@ -1,0 +1,9 @@
+{
+  "name": "@frontend-odyssey/css-challenge-01",
+  "version": "0.1.0",
+  "private": true,
+  "description": "CSS Challenge: Create a responsive card grid",
+  "scripts": {
+    "test": "node test.js"
+  }
+}

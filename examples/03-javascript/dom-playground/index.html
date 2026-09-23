@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOM Playground | Frontend Odyssey</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <h1>DOM Playground</h1>
+      <p class="subtitle">Vanilla JavaScript in action: DOM manipulation, event handling, and localStorage.</p>
+    </header>
+
+    <main class="grid-layout">
+      <!-- 1. Counter Card -->
+      <section class="card" id="counter-section">
+        <div class="card-header">
+          <h2>1. Counter</h2>
+          <span class="badge" id="counter-status">Zero</span>
+        </div>
+        <div class="counter-body">
+          <div class="counter-display" id="counter-value">0</div>
+          <div class="counter-controls">
+            <button id="btn-decrement" class="btn btn-outline" aria-label="Decrease counter">-</button>
+            <button id="btn-reset" class="btn btn-secondary">Reset</button>
+            <button id="btn-increment" class="btn btn-primary" aria-label="Increase counter">+</button>
+          </div>
+          <div class="step-control">
+            <label for="counter-step">Step size:</label>
+            <input type="number" id="counter-step" value="1" min="1" max="100" />
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Color Changer Card -->
+      <section class="card" id="color-section">
+        <div class="card-header">
+          <h2>2. Color Changer</h2>
+          <span class="badge" id="color-badge">HEX</span>
+        </div>
+        <div class="color-body">
+          <div class="color-preview" id="color-preview">
+            <span id="color-value">#3B82F6</span>
+          </div>
+          <div class="color-controls">
+            <button id="btn-random-color" class="btn btn-primary">Random Color</button>
+            <button id="btn-copy-color" class="btn btn-outline">Copy HEX</button>
+          </div>
+          <div class="preset-colors" id="preset-colors">
+            <span class="preset-label">Presets:</span>
+            <button class="color-chip" data-color="#EF4444" style="--chip-bg: #EF4444;" title="Red"></button>
+            <button class="color-chip" data-color="#F59E0B" style="--chip-bg: #F59E0B;" title="Amber"></button>
+            <button class="color-chip" data-color="#10B981" style="--chip-bg: #10B981;" title="Emerald"></button>
+            <button class="color-chip" data-color="#3B82F6" style="--chip-bg: #3B82F6;" title="Blue"></button>
+            <button class="color-chip" data-color="#8B5CF6" style="--chip-bg: #8B5CF6;" title="Purple"></button>
+            <button class="color-chip" data-color="#EC4899" style="--chip-bg: #EC4899;" title="Pink"></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Todo List Card -->
+      <section class="card card-wide" id="todo-section">
+        <div class="card-header">
+          <h2>3. Persistent Todo List</h2>
+          <span class="badge" id="todo-count">0 items left</span>
+        </div>
+        <div class="todo-body">
+          <form id="todo-form" class="todo-form">
+            <input
+              type="text"
+              id="todo-input"
+              class="form-input"
+              placeholder="What needs to be done? (e.g. Master DOM events)"
+              autocomplete="off"
+              required
+            />
+            <button type="submit" class="btn btn-primary">Add Task</button>
+          </form>
+
+          <div class="todo-toolbar">
+            <div class="filters" id="todo-filters">
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="active">Active</button>
+              <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+            <button id="btn-clear-completed" class="btn btn-text">Clear Completed</button>
+          </div>
+
+          <ul id="todo-list" class="todo-list" aria-live="polite">
+            <!-- Dynamically populated via JavaScript -->
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
