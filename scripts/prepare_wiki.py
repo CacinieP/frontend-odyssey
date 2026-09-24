@@ -17,6 +17,10 @@ CHAPTER_NAMES = {
     '01-html': '01-HTML',
     '02-css': '02-CSS',
     '03-javascript': '03-JavaScript',
+    '04-typescript': '04-TypeScript',
+    '05-react': '05-React',
+    '06-engineering': '06-Engineering',
+    '07-ai-agents': '07-AI-Agents',
     'guides': 'Guides',
 }
 
@@ -24,6 +28,10 @@ CHAPTER_TITLES = {
     '01-HTML': 'I. HTML',
     '02-CSS': 'II. CSS',
     '03-JavaScript': 'III. JavaScript',
+    '04-TypeScript': 'IV. TypeScript',
+    '05-React': 'V. React & 现代化框架',
+    '06-Engineering': 'VI. 前端工程化',
+    '07-AI-Agents': 'VII. AI 时代与智能体',
     'Guides': '学习导引 (Guides)',
 }
 
@@ -53,6 +61,10 @@ def main():
         '01-HTML': [],
         '02-CSS': [],
         '03-JavaScript': [],
+        '04-TypeScript': [],
+        '05-React': [],
+        '06-Engineering': [],
+        '07-AI-Agents': [],
     }
 
     wiki_pages: list[tuple[str, str, str]] = []
@@ -139,6 +151,26 @@ def main():
 - [01. 现代 JS 核心机制与闭包](03-JavaScript--01-js-fundamentals)
 - [02. DOM 交互与事件机制](03-JavaScript--02-dom-and-events)
 - [03. 异步编程与模块化](03-JavaScript--03-async-and-modules)
+
+### 04. TypeScript (类型系统与工业级可靠性)
+- [01. TypeScript 核心类型与静态检查](04-TypeScript--01-ts-basics)
+- [02. 接口、类型别名与面向对象设计](04-TypeScript--02-interfaces-and-types)
+- [03. 泛型与高级类型体操](04-TypeScript--03-generics-and-utility-types)
+
+### 05. React (组件化与现代状态驱动 UI)
+- [01. React 核心心智模型与 JSX](05-React--01-react-fundamentals)
+- [02. Hooks 深度剖析与状态驱动](05-React--02-hooks-and-state)
+- [03. 现代全局状态管理与前端路由](05-React--03-state-management-and-routing)
+
+### 06. 前端工程化 (构建、单体仓库与自动化流水线)
+- [01. 现代 Monorepo 架构与 pnpm 工作区](06-Engineering--01-monorepo-and-pnpm)
+- [02. 现代构建工具与 Vite 核心原理](06-Engineering--02-build-tools-and-vite)
+- [03. CI/CD 流水线与自动化测试保障](06-Engineering--03-ci-cd-and-testing)
+
+### 07. AI 时代与智能体 (LLM 前端交互与 MCP 生态)
+- [01. 浏览器与 LLM 交互实战 (SSE/Streaming)](07-AI-Agents--01-browser-llm-integration)
+- [02. 函数调用与模型上下文协议 (MCP)](07-AI-Agents--02-function-calling-and-mcp)
+- [03. 自主智能体循环与检索增强生成 (Agent Loop & RAG)](07-AI-Agents--03-agent-loops-and-rag)
 
 ---
 

@@ -71,7 +71,7 @@ def main():
         run(["git", "add", "."], cwd=wiki_repo)
         run(["git", "commit", "-m", "docs: sync frontend-odyssey documentation to wiki"], cwd=wiki_repo)
         print("🚀 Pushing updates to GitHub Wiki...")
-        run(["git", "push", "origin", "master"], cwd=wiki_repo)
+        run(["git", "push", "origin", "HEAD"], cwd=wiki_repo)
         print(f"✅ Successfully updated GitHub Wiki: https://github.com/{REPO_SLUG}/wiki")
 
 
