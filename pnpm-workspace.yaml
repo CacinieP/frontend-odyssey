@@ -5,3 +5,7 @@ packages:
   - 'challenges/*'
   - 'challenges/**/*'
   - 'projects/*'
+
+allowBuilds:
+  esbuild: true
+  sharp: true

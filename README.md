@@ -6,7 +6,7 @@
 [![Node](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org/)
 [![pnpm](https://img.shields.io/badge/pnpm-%3E%3D9.0.0-orange.svg)](https://pnpm.io/)
 [![CI](https://img.shields.io/badge/CI-GitHub_Actions-2088FF.svg)](https://github.com/CacinieP/frontend-odyssey/actions)
-[![Docs](https://img.shields.io/badge/docs-Astro_Starlight-FF5D01.svg)](https://starlight.astro.build/)
+[![Docs](https://img.shields.io/badge/docs-Astro_Starlight-FF5D01.svg)](https://caciniep.github.io/frontend-odyssey/)
 
 ---
 
